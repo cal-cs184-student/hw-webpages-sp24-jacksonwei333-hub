@@ -45,33 +45,6 @@ that I've heard in lots of contexts and after implementing it, I see some of the
 
 <h3 align="middle">Part 1: Rasterizing single-color triangles</h3>
 
-<p>Here is an example 2x2 gridlike structure using an HTML table. Each <b>tr</b> is a row and each <b>td</b> is a column in that row. You might find this useful for framing and showing your result images in an organized fashion.</p>
-
-<div align="middle">
-  <table style="width=100%">
-    <tr>
-      <td>
-        <img src="images/image1.png" align="middle" width="400px"/>
-        <figcaption align="middle">Caption goes here.</figcaption>
-      </td>
-      <td>
-        <img src="images/image2.png" align="middle" width="400px"/>
-        <figcaption align="middle">Caption goes here.</figcaption>
-      </td>
-    </tr>
-    <br>
-    <tr>
-      <td>
-        <img src="images/image3.png" align="middle" width="400px"/>
-        <figcaption align="middle">Caption goes here.</figcaption>
-      </td>
-      <td>
-        <img src="images/image4.png" align="middle" width="400px"/>
-        <figcaption align="middle">Caption goes here.</figcaption>
-      </td>
-    </tr>
-  </table>
-</div>
 
 <p>First, I'll be describing how I rasterize triangles without any fancy features. The first step is to identify the boundaries for the rasterization. We know the three vertices
   so If we don't want to scan the entire buffer, we can instead scan from the min x, min y to the max x, max y. We are guaranteed that the entire triange is in here. Next we want to 
@@ -87,7 +60,7 @@ that I've heard in lots of contexts and after implementing it, I see some of the
 </pp>
 
 <figure>
-  <img src="image/task1.png" alt="task1">
+  <img src="images/task1.png" alt="task1">
   <figcaption>Task 1 default viewing parameters centered around an interesting area where we see that the default rasterization was not precise enough .</figcaption>
 </figure>
 
@@ -136,7 +109,7 @@ that I've heard in lots of contexts and after implementing it, I see some of the
 
 <h3 align="middle">Part 3: Transforms</h3>
 <figure>
-  <img src="image/task3.png" alt="task1">
+  <img src="images/task3.png" alt="task1">
   <figcaption>This is the cubeman running. I rotated the second portions of his legs and arms as well as the first portion of his right leg</figcaption>
 </figure>
 
@@ -152,7 +125,7 @@ that I've heard in lots of contexts and after implementing it, I see some of the
   the other vertices as well. As we approach the center, we get a mix of all three colors. And this effect is nearly continuous, allowing for a very smooth gradient. 
 </pp>
 <figure>
-  <img src="image/task4.png" alt="task1">
+  <img src="images/task4.png" alt="task1">
   <figcaption>This is achieved by interpolating the triangles using barycentric coordinates, allowing for a gradient of colors.</figcaption>
 </figure>
 
